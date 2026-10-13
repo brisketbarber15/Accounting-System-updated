@@ -51,6 +51,9 @@ public class MainFrame extends javax.swing.JFrame {
             case 11:
                 setPageTitle("About");
                 break;
+	    case 12:
+       		setPageTitle("Perpetual Inventory");
+   		break;
         }
     }
     
@@ -80,7 +83,8 @@ public class MainFrame extends javax.swing.JFrame {
                 new GeneralLedgerPanel(),           // 8
                 new TrialBalancePanel(false),       // 9 Unadjusted Trial Balance
                 new StatementsPanel(),              // 10
-                new AboutPanel());                  // 11
+                new AboutPanel(),                  // 11
+		new PerpetualInventoryPanel());      // 12
         for(int i = 0; i < pages.size(); i++){
             mainDisplayPanel.add(pages.get(i), String.valueOf(i + 1));
         }
@@ -96,6 +100,7 @@ public class MainFrame extends javax.swing.JFrame {
         unadjustedTrialBalanceButton.addActionListener(e -> showPage(9));
         statementsButton.addActionListener(e -> showPage(10));
         aboutButton.addActionListener(e -> showPage(11));
+	perpetualInventoryButton.addActionListener(e -> showPage(12));
     }
 
     private void showPage(int state){
@@ -190,6 +195,7 @@ public class MainFrame extends javax.swing.JFrame {
         chartOfAccountsButton = new javax.swing.JButton();
         beginingTrialBalanceButton = new javax.swing.JButton();
         unadjustedTrialBalanceButton = new javax.swing.JButton();
+	perpetualInventoryButton = new javax.swing.JButton();
         middlePanel = new javax.swing.JPanel();
         titleLabel = new javax.swing.JLabel();
         mainDisplayPanel = new javax.swing.JPanel();
@@ -223,6 +229,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         unadjustedTrialBalanceButton.setText("Unadjusted Trial Balance");
 
+	perpetualInventoryButton.setText("Perpetual Inventory");
+
         javax.swing.GroupLayout sidePanelLayout = new javax.swing.GroupLayout(sidePanel);
         sidePanel.setLayout(sidePanelLayout);
         sidePanelLayout.setHorizontalGroup(
@@ -243,7 +251,8 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(aboutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(chartOfAccountsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(beginingTrialBalanceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(unadjustedTrialBalanceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(unadjustedTrialBalanceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+			    .addComponent(perpetualInventoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -270,9 +279,11 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(generalLedgerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(unadjustedTrialBalanceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(statementsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+		.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+		.addComponent(perpetualInventoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+		.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+		.addComponent(statementsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+		.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(aboutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(57, Short.MAX_VALUE))
         );
@@ -386,6 +397,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton generalJournalButton;
     private javax.swing.JButton generalLedgerButton;
     private javax.swing.JButton inventoryButton;
+    private javax.swing.JButton perpetualInventoryButton;
     private javax.swing.JPanel mainDisplayPanel;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel middlePanel;

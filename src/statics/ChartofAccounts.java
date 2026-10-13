@@ -31,9 +31,8 @@ public class ChartofAccounts {
     int[] costCodes = {500, 501, 502, 503};
     String[] costNames = {"Purchases", "Transportation-in", "Purchases Discounts", "Purchase Return and Allowances"};
 
-    int[] expenseCodes = {600, 601, 602, 603, 604, 605, 610, 611, 612, 613, 620, 630, 631, 632, 640, 650};
-    String[] expenseNames = {"Advertising Expense", "Supplies Expense", "Insurance Expense", "Rent Expense", "Utilities Expense", "Repairs and Maintenance Expense", "Salaries Expense", "SSS and EC Contributions Expense", "Philhealth Contributions Expense", "Pag-IBIG Contributions Expense", "Uncollectible Accounts Expense", "Depreciation Expense - Furniture and Fixtures", "Depreciation Expense - Equipment", "Depreciation Expense - Service Vehicle", "Miscellaneous Expense", "Interest Expense"};
-
+    int[] expenseCodes = {600, 601, 602, 603, 604, 605, 606, 610, 611, 612, 613, 620, 630, 631, 632, 640, 650};
+    String[] expenseNames = {"Advertising Expense", "Supplies Expense", "Insurance Expense", "Rent Expense", "Utilities Expense", "Repairs and Maintenance Expense", "Cost of Goods Sold", "Salaries Expense", "SSS and EC Contributions Expense", "Philhealth Contributions Expense", "Pag-IBIG Contributions Expense", "Uncollectible Accounts Expense", "Depreciation Expense - Furniture and Fixtures", "Depreciation Expense - Equipment", "Depreciation Expense - Service Vehicle", "Miscellaneous Expense", "Interest Expense"};
     public ChartofAccounts(){
         accounts = new ArrayList<>();
         int i;
